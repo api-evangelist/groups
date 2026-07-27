@@ -1,8 +1,25 @@
 aid: groups
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/groups.png
 name: Groups
-description: 'Groups is a company surfaced as a portfolio company of bessemer-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: healthcare. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Groups (Groups Recover Together, joingroups.com) is a healthcare provider delivering
+  outpatient opioid use disorder treatment that combines Suboxone (buprenorphine) medication-assisted
+  treatment with weekly group therapy and individual care coordination. Founded in 2014 and backed by
+  Bessemer Venture Partners, Groups operates in-person locations nationwide alongside a virtual/telehealth
+  care option and a member mobile app, accepting most commercial insurance and Medicaid. It is CARF-accredited
+  and focuses on accessible, non-judgmental, long-term recovery. This is a company profile in the API
+  Evangelist network; Groups is a direct-to-consumer clinical service and publishes no public developer
+  API surface at the time of profiling.'
 url: https://raw.githubusercontent.com/api-evangelist/groups/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +29,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Healthcare
+- Addiction Treatment
+- Opioid Use Disorder
+- Medication-Assisted Treatment
+- Telehealth
+- Behavioral Health
+- Recovery
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +46,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/groups-domain-security.yml
 - type: Website
   url: https://www.joingroups.com/
+- type: Blog
+  url: https://www.joingroups.com/stories-and-resources/
+- type: PrivacyPolicy
+  url: https://www.joingroups.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.joingroups.com/terms-of-use/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
