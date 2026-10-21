@@ -1,4 +1,84 @@
-edges: []
+edges:
+- partner_name: SAMHSA FindTreatment.gov (treatment facility locator)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://findtreatment.gov/
+  category: Listed behavioral health / substance use treatment facility
+  contract_reference:
+    register: SAMHSA FindTreatment.gov (N-SUMHSS facility locator, public JSON export)
+    standard: State-licensed behavioral health treatment facility (SAMHSA N-SUMHSS)
+    spec_file: null
+    role: listed-treatment-facility-operator
+    registered_name: Groups Recover Together
+    matched_domain: joingroups.com
+    matched_by: domain
+    types_of_care:
+    - Substance use treatment
+    prescribes_buprenorphine: true
+    states_sample:
+    - FL
+    - IA
+    - IN
+    - KY
+    - ME
+    - NH
+    - TN
+    - TX
+    - VA
+    - WV
+    certified_products: []
+    signal_note: listing = standard-participant; certified_products = one entry for the federally-certified OTP
+      product type, never per facility; facility counts are never used
+    detected_by: sweep-behavioral-health-treatment.py
+    detected: '2026-10-21'
+  detected_by: sweep-behavioral-health-treatment.py
+  first_seen: '2026-10-21'
+- partner_name: CARF International (accredited providers)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://carf.org/provider/groups-martinsville-367458/
+  category: CARF-accredited behavioral health / rehabilitation provider
+  contract_reference:
+    register: CARF International provider search (carf.org/find-provider)
+    standard: CARF accreditation (health and human services program standards)
+    spec_file: null
+    role: carf-accredited-provider
+    registered_name: 'Recover Together Inc. dba Groups: Recover Together - Midwest Region'
+    register_id: '338417'
+    listed_website: www.joingroups.com
+    matched_domain: joingroups.com
+    matched_by: domain
+    certified_products:
+    - product: 'CARF accreditation: Behavioral Health'
+      product_type: Behavioral Health
+      lapsed: false
+    signal_note: certified_products = one per accreditation AREA, never per site; the search lists current accreditations
+      only, so lapsed is false
+    detected_by: sweep-behavioral-health-treatment.py
+    detected: '2026-10-21'
+  detected_by: sweep-behavioral-health-treatment.py
+  first_seen: '2026-10-21'
 generated: '2026-10-12'
-method: none
-checked: []
+method: searched
+checked:
+- https://carf.org/find-provider/
+- https://findtreatment.gov/locator/exportsAsJson/v2
+- https://www.bacb.com/services/o.php?page=101135
+- https://www.bhcoe.org/
+- https://www.qualitycheck.org/
+- https://www.samhsa.gov/data/data-we-collect/n-sumhss-national-substance-use-and-mental-health-services-survey
+source:
+- https://findtreatment.gov/locator/exportsAsJson/v2
+- https://carf.org/find-provider/
+- https://www.bacb.com/services/o.php?page=101135
+- https://www.qualitycheck.org/
+- https://www.bhcoe.org/
+- https://www.samhsa.gov/data/data-we-collect/n-sumhss-national-substance-use-and-mental-health-services-survey
